@@ -3,7 +3,7 @@ Open Source Water Heater and Plug Load Controller
 
 ## Controller Board
 This is the main board that interfaces with the peripherals.
-The board integrate the following modules and features:
+The board integrates the following modules and features:
 * ESP32
 * U-Blox NEO-M8T GPS Timing Chip
 * SX1276 Radio
@@ -64,7 +64,7 @@ On initialization of the wifi module, if stored wifi configuration parameters ex
 If no parameters exist, the module launches configuration mode.
 
 In configuration mode, the module broadcasts a wifi network named "gridballast". A user can connect to the gridballast network and open
-http://[module-ip]/ (by default 192.168.1.4, can be found programatically with `tcpip_adapter_get_ip_info`) in a web browser. The module will present a webpage where the SSID and password can be configured.
+http://[module-ip]/ (by default 192.168.1.4, can be found programmatically with `tcpip_adapter_get_ip_info`) in a web browser. The module will present a webpage where the SSID and password can be configured.
 To exit configuration mode, the module must be rebooted.
 
 TODO: Gridballast should also support entering configuration mode by pushing a button.

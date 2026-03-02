@@ -44,7 +44,7 @@ static void sensing_task_fn( void *pv_parameters ) {
  */
 void sensing_init_task( void ) {
 
-    printf("Intializing Sensing System...");
+    printf("Initializing Sensing System...");
     xTaskCreate(
                 &sensing_task_fn, /* task function */
                 sensing_task_name, /* sensing task name */

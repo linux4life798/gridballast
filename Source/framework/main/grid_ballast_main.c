@@ -119,7 +119,7 @@ void app_main( void )
     memset(&gb_system_state, 0, sizeof(gb_system_state));
     rwlock_init(&system_state_lock);
     rwlock_init(&i2c_lock);
-    printf("Intializing GridBallast system...\n");
+    printf("Initializing GridBallast system...\n");
 
 
     xTaskCreate( &init_task, "init_task", 4096, NULL, 1, NULL);

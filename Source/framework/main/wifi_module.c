@@ -492,7 +492,7 @@ static void run_mode_normal() {
         ESP_LOGI(TAG, "Connected to AP");
 		// send_data(&system_state);
         //Work in progress
-        // send data to openchirp if manual mode, then recieve from open chirp
+        // send data to openchirp if manual mode, then receive from OpenChirp
         if (system_state.input_mode == 0){
             // get data from openchirp
             double set_point;
@@ -507,7 +507,7 @@ static void run_mode_normal() {
             }
             send_data(&system_state);
         }
-        // get relay_1 setting from open chirp, set in system_state. Toggle relay accordingly
+        // get relay_1 setting from OpenChirp, set in system_state. Toggle relay accordingly
         double relay_1;
         if (get_transducer_value(TRANSDUCER_ID_RELAY_1, &relay_1) == 0) {
             rwlock_reader_lock(&system_state_lock);
@@ -520,7 +520,7 @@ static void run_mode_normal() {
             rwlock_reader_unlock(&system_state_lock);
             send_freq_wrapper();     
         }
-        // get relay_2 setting from open chirp, set in system_state. Toggle relay accordingly
+        // get relay_2 setting from OpenChirp, set in system_state. Toggle relay accordingly
         double relay_2;
         if (get_transducer_value(TRANSDUCER_ID_RELAY_2, &relay_2) == 0) {
             rwlock_reader_lock(&system_state_lock);
@@ -589,7 +589,7 @@ static void run_mode_config() {
  */
 void wifi_init_task( void ) {
 
-    printf("Intializing Wifi System...");
+    printf("Initializing Wifi System...");
     //Sets up hardware
     init_wifi();
     //Create Task

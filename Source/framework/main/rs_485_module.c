@@ -129,7 +129,7 @@ static void rs485_task()
             } 
         } 
         
-        //receieve top and bottom temperatures
+        // receive top and bottom temperatures
         else {
             uart_flush(uart_num);
             len = uart_read_bytes(uart_num, data, BUF_SIZE, 40 / portTICK_RATE_MS);

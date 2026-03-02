@@ -110,7 +110,7 @@ void rfm95_tx() {
     rfm95_write_register(REG_OP_MODE, tx);
 }
 uint8_t get_pa_select(uint64_t channel) {
-    //NOTE - this may have to be revisited in case things dont work
+    // NOTE - this may have to be revisited in case things don't work
     if (channel > RF_MID_BAND_THRESH) {
         return RF_PACONFIG_PASELECT_PABOOST;
     }

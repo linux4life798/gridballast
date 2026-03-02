@@ -98,12 +98,12 @@ ESP_LOGI(TAG, "Starting again!");
  *****************************************/
 
 /**
- * @brief intializes the controller task
+ * @brief initializes the controller task
  *
  * @return void
  */
 void controller_init_task( void ) {
-    printf("Intializing Controlling System...************\n");
+    printf("Initializing Controlling System...************\n");
     ESP_LOGI(TAG, "TASK STARTING*******************");
     xTaskCreatePinnedToCore(
                 controller_task_fn, /* task function */
