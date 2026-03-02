@@ -1,0 +1,27 @@
+name: ESP32 Firmware Build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Build firmware in ESP-IDF container
+        uses: addnab/docker-run-action@v3
+        with:
+          image: espressif/idf:release-v3.3
+          options: >-
+            -v ${{ github.workspace }}:/work
+            -w /work/Source/framework
+          run: |
+            xtensa-esp32-elf-gcc --version
+            make defconfig
+            make -j"$(nproc)" all

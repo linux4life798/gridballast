@@ -1,6 +1,8 @@
 # GridBallast
 Open Source Water Heater and Plug Load Controller
 
+[![ESP32 Firmware Build](https://github.com/WiseLabCMU/gridballast/actions/workflows/esp32-build.yml/badge.svg)](https://github.com/WiseLabCMU/gridballast/actions/workflows/esp32-build.yml)
+
 ## Controller Board
 This is the main board that interfaces with the peripherals.
 The board integrates the following modules and features:
